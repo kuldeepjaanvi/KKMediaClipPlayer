@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4CR-jI-vNP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="5fj-HI-f1E">
+            <objects>
+                <navigationController id="4CR-jI-vNP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0lq-bV-s1c">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fLh-zO-WnH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Idf-iP-Wie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1347" y="-124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LooperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ano-60-i6m">
+                                <rect key="frame" x="0.0" y="108" width="414" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="BoG-gk-C5C"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMg-Gk-dD8">
+                                <rect key="frame" x="121" y="782" width="172" height="30"/>
+                                <state key="normal" title="Play Multiple Media Files "/>
+                                <connections>
+                                    <segue destination="pxV-tK-X1c" kind="show" id="TyB-eh-6Wc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rMg-Gk-dD8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KzQ-SX-XMV"/>
+                            <constraint firstItem="ano-60-i6m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eaF-7H-xgw"/>
+                            <constraint firstItem="ano-60-i6m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gAu-Ft-ADo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ano-60-i6m" secondAttribute="trailing" id="p4l-JT-6gA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rMg-Gk-dD8" secondAttribute="bottom" constant="50" id="zAa-Rq-1sV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hk9-dZ-Ezq"/>
+                    <connections>
+                        <outlet property="mediaLooperView" destination="ano-60-i6m" id="nU8-Gt-2me"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-478" y="-109"/>
+        </scene>
+        <!--Multiple Media File Player-->
+        <scene sceneID="bV8-zI-bjx">
+            <objects>
+                <viewController id="pxV-tK-X1c" customClass="MultipleMediaFilePlayer" customModule="LooperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="58Q-du-oFo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0N-pN-Qqr">
+                                <rect key="frame" x="0.0" y="108" width="414" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Gg9-EM-ecb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rsa-9a-t4P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rsa-9a-t4P" firstAttribute="trailing" secondItem="o0N-pN-Qqr" secondAttribute="trailing" id="FwI-50-Qv0"/>
+                            <constraint firstItem="o0N-pN-Qqr" firstAttribute="top" secondItem="Rsa-9a-t4P" secondAttribute="top" constant="20" id="xcw-bx-9oi"/>
+                            <constraint firstItem="o0N-pN-Qqr" firstAttribute="leading" secondItem="Rsa-9a-t4P" secondAttribute="leading" id="ySE-f2-Jp2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="itQ-mu-RWG"/>
+                    <connections>
+                        <outlet property="mediaLooperView" destination="o0N-pN-Qqr" id="oHi-Ss-9OS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIy-QP-gcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142" y="698"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
